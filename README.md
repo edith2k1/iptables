@@ -14,7 +14,7 @@ By default, Ubuntu will use ufw so if we want to use iptables, we need to remove
 
     sudo apt-get remove ufw –y
 
-**Task 1. Configure blocks all IP access to SERVER A via ssh port except IP 192.168.217.1**
+**Task 1. Configure blocks all traffic to SERVER A via ssh port except IP 192.168.217.1**
 
 Run 2 following commands in SERVER A
 
@@ -24,7 +24,7 @@ Run 2 following commands in SERVER A
 
     iptables -I INPUT -p tcp -s 192.168.217.1 --dport ssh -j ACCEPT
 
-**Task 2. Configure blocks all IP access to SERVER B via http port except IP 192.168.217.1**
+**Task 2. Configure blocks all traffic to SERVER B via http port except IP 192.168.217.1**
 
 Run 2 following commands in SERVER B
 
