@@ -8,11 +8,11 @@ WIN 10: 192.168.217.1
 
 **Turn off the firewall all of them**
 
-On ubuntu, iptables and ufw are automatically installed so we just need to check their version using these following commands: `iptables –version` or `ufw –version`
+On ubuntu, iptables and ufw are automatically installed so we just need to check their version using these following commands: `iptables --version` or `ufw --version`
 
 By default, Ubuntu will use ufw so if we want to use iptables, we need to remove the ufw using the following command: 
 
-    sudo apt-get remove ufw –y
+    sudo apt-get remove ufw -y
 
 **Task 1. Configure blocks all traffic to SERVER A via ssh port except IP 192.168.217.1**
 
