@@ -1,16 +1,16 @@
 # Preparation:
 
-SERVER A: 192.168.217.98
-
-SERVER B: 192.168.217.99 (installed Nginx)
-
-WIN 10: 192.168.217.1
-
-**Turn off the firewall all of them**
+> SERVER A: 192.168.217.98
+>
+> SERVER B: 192.168.217.99 (installed Nginx)
+>
+> WIN 10: 192.168.217.1
+>
+> **Turn off the firewall all of them**
 
 On ubuntu, iptables and ufw are automatically installed so we just need to check their version using these following commands: `iptables --version` or `ufw --version`
 
-By default, Ubuntu will use ufw so if we want to use iptables, we need to remove the ufw using the following command: 
+By default, Ubuntu will use ufw so if we want to use iptables, we need to remove the ufw using this command: 
 
     sudo apt-get remove ufw -y
 
@@ -66,7 +66,7 @@ Run these following commands in SERVER A
 
     iptables -t nat -I POSTROUTING -p tcp -d 192.168.217.99 --dport 80 -j SNAT --to-source 192.168.217.98
   
-  > After converting, display 192.168.217.98 on the Web browser
+  > After converting, return 192.168.217.98 on the Web browser
 
 
 
